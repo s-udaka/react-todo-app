@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './TodoListComponent';
 import Form from './FormComponent';
+import './App.css';
 
 class App extends React.Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="app">
                 <h1>TODOアプリ</h1>
                 <Form value={this.state.value} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
                 <TodoList list={this.state.list} />
