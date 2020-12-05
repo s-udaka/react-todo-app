@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  react:
+    container_name: react-container
+    build: ./react
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./react:/usr/src/app
+    entrypoint: "/bin/sh -c 'yarn install && yarn start'"
+    tty: true
